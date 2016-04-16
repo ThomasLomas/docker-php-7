@@ -16,3 +16,6 @@ RUN apt-get update && apt-get install -y \
 
 ## Install PDO, PDO MySQL
 RUN docker-php-ext-install -j$(nproc) pdo pdo_mysql
+
+# Install MySQLi (Wordpress support)
+RUN docker-php-ext-install -j$(nproc) mysqli
